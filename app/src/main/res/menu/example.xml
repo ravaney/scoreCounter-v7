@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Tenis" android:title="Tenis" android:icon="@drawable/tennis" app:showAsAction="ifRoom"/>
+    <item android:id="Football" android:icon="@drawable/soc" android:title="Football" app:showAsAction="never"/>
+    <item android:title="Swimming" android:id="@+id/Swimming" android:icon="@drawable/swim" app:showAsAction="never"/>
+    <item android:icon="@drawable/cricket" android:id="Cricket" android:title="Cricket" app:showAsAction="never"/>
+</menu>

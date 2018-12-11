@@ -6,10 +6,14 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -24,6 +28,36 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_TEXT = "com.example.lewis.scorecounter.EXTRA_TEXT";
     public static final String EXTRA_TEXT2 = "com.example.lewis.scorecounter.EXTRA_TEXT2";
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.Tennis :
+                RelativeLayout r1 = findViewById(R.id.rl);
+                r1.setBackgroundResource(R.drawable.tennis);
+                break;
+            case R.id.Football:
+                RelativeLayout r2 = findViewById(R.id.r1);
+                r2.setBackgroundResource(R.drawable.Football);
+                break;
+            case R.id.Football:
+                RelativeLayout r3 = findViewById(R.id.r1);
+                r3.setBackgroundResource(R.drawable.Cricket);
+                break;
+            case R.id.Football:
+                RelativeLayout r4 = findViewById(R.id.r1);
+                r4.setBackgroundResource(R.drawable.Swimming);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
